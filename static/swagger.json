@@ -1,0 +1,15 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "description": "ML api",
+        "version": "1.0.0",
+        "title": "ML api model for crime prediction",
+        "contact": {
+            "email": "centtijhonathan@gmail.com"
+        },
+        "license": {
+            "name": "MIT",
+            "url": "https://opensource.org/license/MIT"
+        }
+    }
+}
