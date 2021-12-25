@@ -2,7 +2,7 @@ import numpy as np
 from flask import Flask, request, jsonify, render_template
 import pickle
 #from routes import request_api
-from flask_swagger_ui import get_swaggerui_blueprint
+#from flask_swagger_ui import get_swaggerui_blueprint
 
 app = Flask(__name__)
 model = pickle.load(open('model.pkl', 'rb'))
@@ -12,14 +12,14 @@ def home():
     return render_template('index.html')
 SWAGGER_URL = '/swagger'
 API_URL = '/static/swagger.json'
-swaggerui_blueprint = get_swaggerui_blueprint(
-    SWAGGER_URL,
-    API_URL,
-    config={
-        "app_name": "Crime prediction"
-    }
-)
-app.register_blueprint(swaggerui_blueprint, url_prefix=SWAGGER_URL)
+#swaggerui_blueprint = get_swaggerui_blueprint(
+    #SWAGGER_URL,
+    #API_URL,
+    #config={
+        #"app_name": "Crime prediction"
+    #}
+#)
+#app.register_blueprint(swaggerui_blueprint, url_prefix=SWAGGER_URL)
 #app.register_blueprint(request_api.get_blueprint())
 
 @app.route('/predict',methods=['POST'])
